@@ -1,0 +1,37 @@
+{
+  "urlb" : "https://www.confortetvie.fr/fr/",
+  "date" : "1217",
+  "ref": {
+    "pk1" : "1754191",
+    "pk2" : "1734193",
+    "pk3" : "1145499"
+  },
+  "lib": {
+    "pk1" : ["Couvre-fauteuil malin écru", ""],
+    "pk2" : ["Chapeau polaire double", "épaisseur : Beige ou Rouge"],
+    "pk3" : ["Lot de 2 gants microfibre", "nettoie lunettes"]
+  },
+  "url": {
+    "pk1" : "canevas/coussins-au-point-noue/",
+    "pk2" : "loisirs-creatifs/perles-paillettes/",
+    "pk3" : "loisirs-creatifs/no-l/"
+  },
+  "lib_url": {
+    "pk1" : "kit-coussin-point-noue",
+    "pk2" : "kit-creatif-perles-5-etoiles",
+    "pk3" : "papier-cadeau-etoiles-rouge-vert"
+  },
+  "price": {
+    "pk1" : "24.95",
+    "pk2" : "9.95",
+    "pk3" : "5.95"
+  },
+  "ID" : "818",
+  "cat_link" : "https://www.confortetvie.fr/cat/fr/ECatalog.htm",
+  "###config" : "NE PAS MODIFER",
+  "month" : "11",
+  "year"  : "17",
+  "output" : "evtSrc/**/",
+  "dest"   : "evtProd/",
+  "brand" : "CV_"
+}

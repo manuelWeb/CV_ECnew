@@ -1,0 +1,48 @@
+-lib = [["Kit coussin point noué", ""], ["Kit créatif perles 5 étoiles", ""], ["Papier cadeau", "Etoiles rouge/vert"]]
+== Slim::Template.new('evtSrc/var_global.slim').render
+== Slim::Template.new('evtSrc/FR/var.slim').render
+doctype transitional
+html
+  head
+    meta http-equiv="Content-Type" content="text/html; charset=utf-8"
+    link href="index.css" media="screen" rel="stylesheet" type="text/css"
+    / link href="evtSrc/FR/index.scss"
+    title CV-FR
+
+  body
+    #evtFirst_Link.centralEvent
+      / titre + sous titre
+      .elmnt-center
+        ul
+          - for i in (1..3) do
+            - link = $objso["urlb"]+$objso["url"]["pk#{i}"]+$objso["lib_url"]["pk#{i}"]+"/"+$objso["ref"]["pk#{i}"]+".html"
+            - ggal = $ggstart+"'pk#{i}_"+$objso["ref"]["pk#{i}"]+"', "+$ggend
+            li class="pck#{i}"
+              
+              / price
+              span.evt-price == $objso["price"]["pk#{i}"] + " €"
+
+              a href==(link) onclick==(ggal)
+                img src="pk#{i}.jpg" alt=""
+
+              / lib
+              p
+                -if $objso["lib"]["pk#{i}"][1] == ""
+                  span == $objso["lib"]["pk#{i}"][0]
+                -else
+                  span == $objso["lib"]["pk#{i}"][0]
+                  span == $objso["lib"]["pk#{i}"][1]
+
+
+      / zone cata
+      a.bt-cata href==($objso["cat_link"]) target="_blank" onclick==$var_start_gaq+$var_gaq_cat+$var_end_gaq
+        img src="cat.png" alt=""
+        label.bt_cat
+          | je feuillette
+          br
+          | mon
+          br
+          | catalogue !
+        span#bt_cat Cliquez ici
+    
+    script src="gooFont.js" type="text/javascript"

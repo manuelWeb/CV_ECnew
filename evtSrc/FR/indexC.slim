@@ -1,6 +1,4 @@
--lib = [["Kit coussin point noué", ""], ["Kit créatif perles 5 étoiles", ""], ["Papier cadeau", "Etoiles rouge/vert"]]
 == Slim::Template.new('evtSrc/var_global.slim').render
-== Slim::Template.new('evtSrc/FR/var.slim').render
 doctype transitional
 html
   head
@@ -35,7 +33,7 @@ html
 
 
       / zone cata
-      a.bt-cata href==($objso["cat_link"]) target="_blank" onclick==$var_start_gaq+$var_gaq_cat+$var_end_gaq
+      a.bt-cata href==($objso["cat_link"]["fr"]) target="_blank" onclick==$ggstart+$var_gaq_cat+$ggend
         img src="cat.png" alt=""
         label.bt_cat
           | je feuillette

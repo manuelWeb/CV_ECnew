@@ -26,12 +26,21 @@
     "pk2" : "9.95",
     "pk3" : "5.95"
   },
-  "ID" : "818",
-  "cat_link" : "https://www.confortetvie.fr/cat/fr/ECatalog.htm",
+  "cat_link" : {
+    "fr": "https://www.confortetvie.fr/cat/fr/ECatalog.htm?urlLangue=fr"
+  },
+  "ID" : {
+  "fr": "1276",
+  "bf": "1275",
+  "de": "1278",
+  "nl": "1274",
+  "uk": "1277"
+  },
   "###config" : "NE PAS MODIFER",
   "month" : "11",
   "year"  : "17",
   "output" : "evtSrc/**/",
   "dest"   : "evtProd/",
-  "brand" : "CV_"
+  "brand" : "CV_",
+  "TH" : "firstEvt"
 }

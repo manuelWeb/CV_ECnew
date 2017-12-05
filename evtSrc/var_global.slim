@@ -1,15 +1,12 @@
--$date     = "1117"
--$TH       = "firstEvt"
--$ID = { # ...,
-  # FR,
-  fr: "1276",
-  # BF,
-  bf: "1275",
-  # BV,
-  bv: "1279",
-  # DE,
-  de: "1278",
-  # NL,
-  nl: "1274",
-  # UK,
-  uk: "1277"}
+/ ### !important créer les variable depuis source.json
+-require 'json'
+-file   = File.read('source.json')
+-$objso = JSON.parse(file)
+/ NE PAS TOUCHER LE CODE ÇI DESSOUS !!!!
+- $date   = $objso["date"]
+- $rayEvt  = "boutique/rayon_evenement.aspx?pg=0&evenement_id=#{$objso["ID"]["fr"]}"
+
+/ google analytics
+- $var_gaq_cat = "'Ecata', "
+- $ggstart     = "ga('local.send', 'event', 'EncartHP_#{$date}', "
+- $ggend       = "document.location.pathname);"

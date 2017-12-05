@@ -47,7 +47,7 @@ var src    = config.output,
     img    = 'evtSrc/**/*.{png,jpg,gif,svg}',
     dest   = config.dest,
     date   = config.date + '_',
-    thname = config.brand;
+    thname = config.brand + config.TH;
 /*=================================
 =            task init            =
 =================================*/
@@ -187,7 +187,7 @@ gulp.task('zipAllGuy',function () {
       var fileName = file.path.substr(file.path.lastIndexOf("\\") + 1);
       console.log('fileName ' + fileName + ' file ' + file.path)
       gulp.src("./evtProd/" + fileName + "/*")
-        .pipe(zip(date + thname + fileName + ".zip"))
+        .pipe(zip(date + thname + "_" + fileName + ".zip"))
         .pipe(gulp.dest("./zipped"));
       return stream;
     }));// end foreach

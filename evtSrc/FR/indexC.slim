@@ -15,8 +15,8 @@ html
           - for i in (1..3) do
             - link = $objso["urlb"]+$objso["url"]["pk#{i}"]+$objso["lib_url"]["pk#{i}"]+"/"+$objso["ref"]["pk#{i}"]+".html"
             - ggal = $ggstart+"'pk#{i}_"+$objso["ref"]["pk#{i}"]+"', "+$ggend
+
             li class="pck#{i}"
-              
               / price
               span.evt-price == $objso["price"]["pk#{i}"] + " €"
 
@@ -26,21 +26,26 @@ html
               / lib
               p
                 -if $objso["lib"]["pk#{i}"][1] == ""
-                  span == $objso["lib"]["pk#{i}"][0]
+                  a href==(link)
+                    == $objso["lib"]["pk#{i}"][0]
                 -else
-                  span == $objso["lib"]["pk#{i}"][0]
-                  span == $objso["lib"]["pk#{i}"][1]
+                  a href==(link)
+                    == $objso["lib"]["pk#{i}"][0]
+                    br
+                    == $objso["lib"]["pk#{i}"][1]
 
 
       / zone cata
-      a.bt-cata href==($objso["cat_link"]["fr"]) target="_blank" onclick==$ggstart+$var_gaq_cat+$ggend
-        img src="cat.png" alt=""
-        label.bt_cat
-          | je feuillette
-          br
-          | mon
-          br
-          | catalogue !
-        span#bt_cat Cliquez ici
+      .center_zc
+        a.bt-cata href==($objso["cat_link"]["fr"]) target="_blank" onclick==$ggstart+$var_gaq_cat+$ggend
+          img src="cat.png" alt=""
+          label.bt_cat
+            | je feuillette mon
+            br
+            | catalogue !
+            br
+            | <b>Cliquez ici</b>
+        a.bt-rayEvt href==($rayEvt)
+          | Voir les nouveautés
     
     script src="gooFont.js" type="text/javascript"

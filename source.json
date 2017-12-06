@@ -1,25 +1,25 @@
 {
   "urlb" : "https://www.confortetvie.fr/fr/",
   "date" : "1217",
-  "ref": {
-    "pk1" : "1754191",
-    "pk2" : "1734193",
-    "pk3" : "1145499"
-  },
   "lib": {
     "pk1" : ["Couvre-fauteuil malin écru", ""],
-    "pk2" : ["Chapeau polaire double", "épaisseur : Beige ou Rouge"],
+    "pk2" : ["Chapeau polaire", "Beige ou Rouge"],
     "pk3" : ["Lot de 2 gants microfibre", "nettoie lunettes"]
   },
   "url": {
-    "pk1" : "canevas/coussins-au-point-noue/",
-    "pk2" : "loisirs-creatifs/perles-paillettes/",
-    "pk3" : "loisirs-creatifs/no-l/"
+    "pk1" : "idees-vie-facile/bureau-salon/",
+    "pk2" : "vetements-accessoires/chapeaux-casquettes-bonnets/",
+    "pk3" : "vetements-accessoires/accessoires/"
   },
   "lib_url": {
-    "pk1" : "kit-coussin-point-noue",
-    "pk2" : "kit-creatif-perles-5-etoiles",
-    "pk3" : "papier-cadeau-etoiles-rouge-vert"
+    "pk1" : "couvre-fauteuil-malin-ecru",
+    "pk2" : "chapeau-polaire-double-epaisseur-beige",
+    "pk3" : "lot-2-gants-microfibre-nettoie-lunettes"
+  },
+  "ref": {
+    "pk1" : "1654425",
+    "pk2" : "9228321",
+    "pk3" : "1258128"
   },
   "price": {
     "pk1" : "24.95",
@@ -30,7 +30,7 @@
     "fr": "https://www.confortetvie.fr/cat/fr/ECatalog.htm?urlLangue=fr"
   },
   "ID" : {
-  "fr": "1276",
+  "fr": "807",
   "bf": "1275",
   "de": "1278",
   "nl": "1274",

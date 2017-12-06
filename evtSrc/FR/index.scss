@@ -7,7 +7,7 @@ $fontSerif: Georgia, "Times New Roman", Times, serif;
 $font-stack-arial: Arial, Helvetica, sans-serif;
 $roboto: 'Roboto', sans-serif;
 $unit: 10px;
-$cv-color: #922625; $bg-cat: #FDD4C0; $primColor : #932725;
+$cv-color: #922625; $bg-cat: #F3E7D9; $primColor : #932725;
 $h1likesize: $unit*4.8; $h2likesize: 30px; $h3likesize: 21px;
 $h1-lh: 174%;
 $EC_height: 465;
@@ -16,47 +16,44 @@ $EC_height: 465;
   height: #{$EC_height}px;
   box-sizing: border-box;
 }
-.elmnt-center {
-  position: absolute;
-}
-ul {margin: 0; padding: 0;}
-li.pck1, li.pck2, li.pck3 {
-  position: relative;
-  display: inline-block;
-  width: 216px; height: 250px;
-  transition: all 0.5s ease-in-out 0s;
-  transform-style: preserve-3d;
-  p {
-    position: absolute;
-    width: 216px-12px;
-    margin: 6px 0 0;
-    padding: 6px;
-    text-align: center;
-  }
-  span {
-    text-rendering: optimizeLegibility;
-    font: normal 16px Arial, "Helvetica Neue", Helvetica, sans-serif;
-    color: $primColor;
-    padding: 2px 6px;
-    &+span {
-      display: inline-block;
+.elmnt-center{
+  width: 772px; float: left;
+   margin-left: 0; padding-top: 20px;
+  text-align: center;
+  ul {
+    margin: 0; padding: 0;
+    display: flex; flex-direction: row;
+    list-style: none;
+    li.pck1, li.pck2, li.pck3 {
+      // outline: solid 1px gray;
+      position: relative;
+      width: 256px; height: 250px;
+      transition: all 0.5s ease-in-out 0s;
+      transform-style: preserve-3d;
+      p {
+        margin: 6px 0 0;
+        text-align: center;
+        a {
+          font: bold 16px/124% Arial, "Helvetica Neue", Helvetica, sans-serif;
+          color: $primColor;
+          text-shadow: -1px -1px 0 #fff, 1px -1px 0 #fff, -1px 1px 0 #fff, 1px 1px 0 #fff;
+          text-decoration: none;
+        }
+      }
+      a {display: inherit; font-size: 0;}
+      img {display: inline-block; border: 1px solid #932725; }
+      .evt-price {
+        // transform-style: initial;
+        position: absolute; top: -14px; right: 8px;
+        padding: 0 12px;
+        font: bold  21px/32px Arial, sans-serif;
+        color: #F86006;
+        border-radius: 7px;
+        background-color: $bg-cat;
+      }
     }
   }
-  img {
-    border: 1px solid #932725;
-  }
-  .evt-price {
-    // transform-style: initial;
-    position: absolute;
-    padding: 0 12px;
-    font: bold  21px/32px Arial, sans-serif;
-    color: #fff;
-    border-radius: 7px;
-    background-color: #932725;
-  }
 }
-
-// OLD
 
 .centralEvent{
   position: relative; float: left;
@@ -64,76 +61,46 @@ li.pck1, li.pck2, li.pck3 {
   height: #{$EC_height}px;
   margin: 0;
   background: url(bg.jpg) no-repeat;
+  .center_zc {
+    float: right;
+    width: 192px;
+    text-align: center; /* centre bt rayEvt */
+  }
   .bt-cata{
-    position:absolute; right:7px; top:0;
-    width:150px; height:254px; margin-left:10px;
-    text-align:center; text-decoration:none;
-    // background:url(bgDuCat.png) no-repeat 0 0;
+    position: absolute; right: 23px; top: 0;
+    width: 150px;
+    padding-bottom: 8px;
+    text-align: center; text-decoration: none;
     border-radius: 0 0 10px 10px;
     background-image: linear-gradient(rgba($bg-cat,0), $bg-cat);
-    label,span{
-      display:inline-block;
+    img {transition: all 0.5s ease-in-out 0s;}
+    &:hover img {
+      transform: rotate(8deg);
     }
     label{
-      font:bold 16px $font-stack-arial; text-transform:uppercase; color:#5B594F;
-    }
-    span{
-      margin-top: 6px;
-      padding:5px 15px;
-      color:#390907;
-      background-color:#C3B191;
-      border-radius: 10px; border:none;
       transition: all 0.5s ease-in-out 0s;
-      font:bold 14px Arial;
+      display:inline-block;
+      font: normal 14px/108% $font-stack-arial; color:#59594D;
       cursor:pointer;
+      b {font-weight: bold; color: #922625; text-decoration: underline;}
     }
-    &:hover span {
-      color: lighten(#390907, 10%);
-      background-color: darken(#C3B191,20%);
+    &:hover label{
+      line-height: 144%;
     }
   }
-  a.bt-cata img{
-    border:none;
+  .bt-rayEvt{
+    display: inline-block;
+    margin-top: 223px;
+    padding: 0 15px;
+    font: bold 16px/28px Arial;
+    color: #F86006;
+    background-color: #FFF;
+    border-radius: 10px; border:none; text-decoration: none;
     transition: all 0.5s ease-in-out 0s;
-  }
-  a.bt-cata:hover img{
-    transform: rotate(8deg);
-  }
-}
-.elmnt-center{
-  margin-top: 14px; margin-left: 190px;
-  text-align: center; // outline: solid;
-}
-.h1-like, .h2-like, .h3-like {display: block;}
-.h1-like {
-  font: normal bold $h1likesize $font-stack-arial; color: #932726;
-  // @include text-shadow(0 0 3px #fff,0 0 6px #fff,0 0 9px #fff);
-}
-.h2-like {
-  margin-top: $unit;
-  font: normal normal $h2likesize#{'/'}125% $roboto; color: #FF3300; // orange:-bleu:#005CA3 
-  text-shadow: 2px 0 0 #fff, -2px 0 0 #fff, 0 2px 0 #fff, 0 -2px 0 #fff, 1px 1px #fff, -1px -1px 0 #fff, 1px -1px 0 #fff, -1px 1px 0 #fff;
-}
-.h3-like {
-  margin-top: $unit;
-  font: normal normal $h3likesize $roboto; color: #005CA3; 
-}
-.btn {display: inline-block;}
-.btn{
-  // margin: 10px 0 0 468px;
-  margin-top: 10px;
-  padding: 6px 16px; 
-	padding-bottom: 8px;
-  // border: 2px solid #FFFFFF;
-  font: normal normal 16px $font-stack-arial; color: #fff; 
-  text-align:center; text-decoration:none;
-  border-radius: 8px;
-}
-.btn-gradient{
-  background: #2F76F6;
-  background-image: linear-gradient(#3079FC, #2254B0);
-  &:hover{
-    background: #245ABD;
-    background-image: linear-gradient(#2254B0, #3079FC);
+    &:hover, &:focus {
+      color: #fff;
+      text-decoration: underline;
+      background-color: #F86006;
+    }
   }
 }

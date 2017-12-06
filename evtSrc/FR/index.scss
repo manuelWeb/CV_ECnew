@@ -10,7 +10,7 @@ $unit: 10px;
 $cv-color: #922625; $bg-cat: #F3E7D9; $primColor : #932725;
 $h1likesize: $unit*4.8; $h2likesize: 30px; $h3likesize: 21px;
 $h1-lh: 174%;
-$EC_height: 465;
+$EC_height: 475;
 // surcharge
 #hpAnimCo{
   height: #{$EC_height}px;
@@ -18,7 +18,7 @@ $EC_height: 465;
 }
 .elmnt-center{
   width: 772px; float: left;
-   margin-left: 0; padding-top: 20px;
+  margin-left: 0; padding-top: 20px;
   text-align: center;
   ul {
     margin: 0; padding: 0;
@@ -84,7 +84,7 @@ $EC_height: 465;
       cursor:pointer;
       b {font-weight: bold; color: #922625; text-decoration: underline;}
     }
-    &:hover label{
+    &:hover label, &:focus label{
       line-height: 144%;
     }
   }
@@ -96,7 +96,7 @@ $EC_height: 465;
     color: #F86006;
     background-color: #FFF;
     border-radius: 10px; border:none; text-decoration: none;
-    transition: all 0.5s ease-in-out 0s;
+    transition: all .15s ease-in-out 0s;
     &:hover, &:focus {
       color: #fff;
       text-decoration: underline;

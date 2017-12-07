@@ -4,7 +4,7 @@
 -$objso = JSON.parse(file)
 / NE PAS TOUCHER LE CODE ÇI DESSOUS !!!!
 - $date   = $objso["date"]
-- $rayEvt  = "boutique/rayon_evenement.aspx?pg=0&evenement_id=#{$objso["ID"]["fr"]}"
+- $rayEvt  = "#{$objso["urlb"]}boutique/rayon_evenement.aspx?pg=0&evenement_id=#{$objso["ID"]["fr"]}"
 
 / google analytics
 - $var_gaq_cat = "'Ecata', "
